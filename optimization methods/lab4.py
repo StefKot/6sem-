@@ -5,8 +5,7 @@ from tkinter import ttk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 def f(x):
-    return np.sin(x) * np.cos(2 * x) * (-0.05 * x)
-    # return ((x ** 5) / (x - 4)) - 5 * (x ** 2) + np.exp(x)
+    return (x + 1) * np.exp(np.cos(x))
 
 def df(x, h=1e-6):
     return (f(x + h) - f(x - h)) / (2 * h)
@@ -150,7 +149,6 @@ def plot_results(a, b, results):
         # Обработка Фибоначчи
         x_fib, y_fib, iter_fib, rng_fib = res["fibonacci"]
         if x_fib is not None:
-            # Определение типа экстремума для подписи на русском
             if res["type"] == "max":
                 type_str = "Максимум"
             elif res["type"] == "min":
@@ -170,7 +168,6 @@ def plot_results(a, b, results):
         # Обработка Ньютона (Касательных)
         x_newton, y_newton, iter_newton, rng_newton = res["newton"]
         if x_newton is not None:
-            # Определение типа экстремума для подписи на русском
             if res["type"] == "max":
                 type_str = "Максимум"
             elif res["type"] == "min":
@@ -246,7 +243,6 @@ def run_app():
                 x_str = f"{x_val:.6f}"
                 y_str = f"{y_val:.6f}" if y_val is not None else "None"
 
-            # Перевод на русский для таблицы
             if typ == "max":
                 type_str = "Максимум"
             elif typ == "min":
