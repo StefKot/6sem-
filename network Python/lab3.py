@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import math
 
 # Задание 1: Удвоение элементов списка с помощью map и lambda
@@ -8,9 +7,8 @@ def task_1():
     my_list = [1, 2, 3, 4, 5]
     print("Задание 1: Входные данные:", my_list)
 
-    # Лямбда-функция для удвоения
     doubled_list = list(map(lambda x: x * 2, my_list))
-    print("Результат:", doubled_list, end="\n\n")  # Вывод: [2, 4, 6, 8, 10]
+    print("Результат:", doubled_list, end="\n\n")
 
 # Задание 2: Фильтрация положительных чисел с помощью filter и lambda
 
@@ -19,7 +17,7 @@ def task_2():
     numbers = [-2, -1, 0, 1, 2, 3, 4, 5]
     print("Задание 2: Входные данные:", numbers)
     positive_numbers = list(filter(lambda x: x > 0, numbers))
-    print("Результат:", positive_numbers, end="\n\n")  # Вывод: [1, 2, 3, 4, 5]
+    print("Результат:", positive_numbers, end="\n\n")
 
 # Задание 3: Арифметические операции с использованием функции
 
@@ -67,7 +65,6 @@ def task_5():
     print("Входные данные: 5", " Результат:", square(5))
     print("Входные данные: 10", " Результат:", square(10), end="\n\n")
 
-# Вызов всех функций заданий
 if __name__ == "__main__":
     task_1()
     task_2()
